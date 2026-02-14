@@ -34,5 +34,5 @@ Run using:
 
 ## Program Output
 
-<img src="output.png" width="600" alt="Adder Output">
+<img src="output.png" width="500" alt="Adder Output">
 
