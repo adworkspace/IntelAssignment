@@ -10,6 +10,7 @@ using namespace std;
 // All Control Signals.
 enum Command {
     LOAD = 13,   // Enter key
+    LOAD_LINUX=10,
     ADD = 43,    // + key
     SHOW = 61,   // = key
     EXIT_LQ = 'q',
@@ -90,7 +91,7 @@ int main() {
 
             //Checking entered key for corresponding operations.
             
-            if (key==LOAD) { 
+            if (key==LOAD||key==LOAD_LINUX) { 
                 loadToFifos(arrayA, arrayB, fifoA, fifoB, currentIndex);
             } 
             else if (key==ADD) {
@@ -124,11 +125,13 @@ void addArrayItems(vector<int> &arrA, vector<int> &arrB){
         cin>>item1;
         if(item1=="s"||item1=="S"){
             cout<<"Arrays are created...";
+            cin.ignore(1000, '\n');
             break;   
         }
         cin>>item2;
         if(item2=="s"|| item2=="S"){
             cout<<"Arrays are created...";
+            cin.ignore(1000, '\n');
             break;
         }
 
